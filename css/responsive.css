@@ -1,4 +1,8 @@
 /* Desktop / tablet overrides — mobile-first uses min-width queries */
+@media (min-width: 768px) {
+  .container { width: calc(100% - 4rem); }
+}
+
 @media (min-width: 900px) {
 
   .menu-toggle { display: none; }
@@ -6,55 +10,201 @@
     position: static;
     display: flex !important;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 2.5rem;
     background: transparent;
     border: none;
     box-shadow: none;
     min-width: auto;
     align-items: center;
   }
-  .nav-links a { padding: 0; color: var(--text-dim); }
+  .nav-links a { 
+    padding: 0; 
+    color: var(--text-dim);
+    font-size: 0.8rem;
+  }
+  .nav-links a:hover {
+    color: var(--gold);
+    background: transparent;
+  }
 
   .container { width: calc(100% - 8rem); }
 
   /* Hero two-column layout */
-  #hero { padding: 6rem 0; }
+  #hero { padding: 8rem 0; }
   .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 420px;
-    gap: 2.5rem;
+    grid-template-columns: 1.1fr 400px;
+    gap: 3.5rem;
     align-items: center;
   }
-  .hero-content { text-align: left; }
-  .hero-name { font-size: clamp(3rem, 5.5vw, 5rem); }
-  .hero-tagline { max-width: 540px; font-size: 1.15rem; padding-left: 1.2rem; }
+  .hero-content { 
+    text-align: left;
+  }
+  .hero-label {
+    margin-bottom: 1.2rem;
+    font-size: 0.8rem;
+  }
+  .hero-name { 
+    font-size: clamp(2.5rem, 6vw, 4.5rem); 
+    margin-bottom: 1.2rem;
+  }
+  .hero-tagline { 
+    max-width: 100%;
+    font-size: 1.15rem; 
+    padding-left: 1.2rem;
+  }
 
   /* Larger photo frame */
-  .photo-frame { width: 330px; height: 410px; border-radius: 12px; }
+  .photo-frame { 
+    width: 360px; 
+    height: 440px; 
+    border-radius: 12px; 
+  }
 
   /* Stats -> 4 columns */
   .stats-bar {
     grid-template-columns: repeat(4, 1fr);
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     gap: 2rem;
+    margin: 0 auto;
+    width: calc(100% - 8rem);
+    max-width: var(--max-width);
+  }
+
+  /* About -> 2 columns */
+  .about-grid { 
+    grid-template-columns: 1.3fr 1fr; 
+    gap: 3rem;
+  }
+  .about-text p {
+    font-size: 1rem;
+  }
+  .about-quote {
+    font-size: 1.15rem;
   }
 
   /* Projects -> grid of 2 */
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
+  }
+  .project-card {
+    padding: 2rem;
+  }
+  .project-name {
+    font-size: 1.4rem;
   }
 
-  /* About -> 2 columns */
-  .about-grid { grid-template-columns: 1.2fr 0.8fr; gap: 2.2rem; }
-
-  /* Experience -> two columns with date column */
-  .exp-item { display: grid; grid-template-columns: 180px 1fr; gap: 1.6rem; align-items: start; }
+  /* Experience -> better layout */
+  .experience-list {
+    gap: 1.2rem;
+  }
+  .exp-item { 
+    display: grid; 
+    grid-template-columns: 200px 1fr; 
+    gap: 2rem; 
+    align-items: start;
+    padding: 1.2rem;
+  }
+  .exp-left {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+  }
 
   /* Buttons and text scale */
-  .btn-primary { padding: .75rem 1.25rem; font-size: .85rem; }
-  .btn-secondary { padding: .7rem 1.1rem; }
+  .btn-primary { 
+    padding: 0.8rem 1.4rem; 
+    font-size: 0.85rem;
+  }
+  .btn-secondary { 
+    padding: 0.75rem 1.3rem;
+    font-size: 0.85rem;
+  }
 
   /* Footer alignment */
-  footer { display:flex; justify-content:space-between; padding: 1.5rem 0; }
+  footer { 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  footer p {
+    margin-bottom: 0;
+  }
+
+  /* Contact section */
+  #contact {
+    padding: 4rem 0;
+  }
+  .contact-heading {
+    font-size: 2.5rem;
+  }
+  .contact-sub {
+    font-size: 1rem;
+  }
+
+  /* Section header improvements */
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  /* Stat cards */
+  .stat {
+    padding: 1.5rem;
+  }
+  .stat-num {
+    font-size: 2rem;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  
+  .container { width: calc(100% - 10rem); }
+  
+  #hero { 
+    padding: 10rem 0; 
+  }
+  .hero-grid {
+    grid-template-columns: 1.2fr 420px;
+    gap: 4rem;
+  }
+  .hero-name {
+    font-size: 4.5rem;
+  }
+
+  .stats-bar {
+    width: calc(100% - 10rem);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .project-card {
+    padding: 2rem;
+  }
+
+  .about-grid {
+    gap: 3.5rem;
+  }
+}
+
+/* Tablet-specific tweaks */
+@media (min-width: 768px) and (max-width: 899px) {
+  .hero-grid {
+    flex-direction: column;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
