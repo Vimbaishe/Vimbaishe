@@ -33,7 +33,7 @@ I am writing code for healthcare, analysing data for businesses, leading an Enac
 innovation chapter or representing students on international stages, my engineering ethos is
 consistent: *technology is most powerful when it is built with and for community.*
 
-> 🌍 **Millennium Campus Fellow** · **McKinsey Forward Alumna** · **Awareness 360 Fellowship**  **Higherlife Foundation Fellow**
+> 🌍 **Millennium Campus Fellow** · **McKinsey Forward Alumna** · **Awareness 360 Fellowship** · **Higherlife Foundation Fellow**
 > 
 > 🏆 **JCI National Competition Winner** (E-Mukoko) · **Schneider Electric Challenge Top 3**
 > 
