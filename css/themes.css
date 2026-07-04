@@ -1,0 +1,7 @@
+/* simple theme hook (kept minimal so it's easy to expand) */
+:root { --accent: var(--gold); }
+
+[data-theme="teal"] {
+  --accent: var(--teal);
+  --gold: #2DD4BF;
+}

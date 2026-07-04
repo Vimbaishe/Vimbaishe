@@ -1,0 +1,60 @@
+/* Desktop / tablet overrides — mobile-first uses min-width queries */
+@media (min-width: 900px) {
+
+  .menu-toggle { display: none; }
+  .nav-links {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    gap: 1.5rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    min-width: auto;
+    align-items: center;
+  }
+  .nav-links a { padding: 0; color: var(--text-dim); }
+
+  .container { width: calc(100% - 8rem); }
+
+  /* Hero two-column layout */
+  #hero { padding: 6rem 0; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .hero-content { text-align: left; }
+  .hero-name { font-size: clamp(3rem, 5.5vw, 5rem); }
+  .hero-tagline { max-width: 540px; font-size: 1.15rem; padding-left: 1.2rem; }
+
+  /* Larger photo frame */
+  .photo-frame { width: 330px; height: 410px; border-radius: 12px; }
+
+  /* Stats -> 4 columns */
+  .stats-bar {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+
+  /* Projects -> grid of 2 */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* About -> 2 columns */
+  .about-grid { grid-template-columns: 1.2fr 0.8fr; gap: 2.2rem; }
+
+  /* Experience -> two columns with date column */
+  .exp-item { display: grid; grid-template-columns: 180px 1fr; gap: 1.6rem; align-items: start; }
+
+  /* Buttons and text scale */
+  .btn-primary { padding: .75rem 1.25rem; font-size: .85rem; }
+  .btn-secondary { padding: .7rem 1.1rem; }
+
+  /* Footer alignment */
+  footer { display:flex; justify-content:space-between; padding: 1.5rem 0; }
+}
