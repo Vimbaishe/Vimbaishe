@@ -1,33 +1,51 @@
 <h1 align="center">Hi, I'm Pamela 👋🏾</h1>
+
 <p align="center">
-  <strong>Software Developer· Data Science and Engineering· IT Student. Builder for Communities</strong>
+  <strong>Software Developer 💻 | Data Science & Engineering 📊 | Community Builder 🚀</strong>
 </p>
+
 <p align="center">
-  <a href="https://linkedin.com/in/pamela-v-moyo">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  <a href="https://linkedin.com/in/pamela-v-moyo" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <img src="https://img.shields.io/badge/Zimbabwe-🌍-009A44?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Open_to_Opportunities-✅-success?style=for-the-badge" />
+  <img src="https://shields.io_🇿🇼-006A4E?style=for-the-badge" alt="Location" />
+  <img src="https://shields.io_💼-238636?style=for-the-badge" alt="Status" />
 </p>
 
-About Me
+## 👩🏾‍💻 About Me
 
-I'm an Information Technology student at the Harare Institute of Technology, currently deepening my technology knowledge in the tech field, gathering knowledge in various tech and right now I have a specific interest in data science and engineering which I have been exploring through the Women Techsters Fellowship (https://tech4dev.com/programs/women-techsters.html) and software development which I am exploring through actually working as an intern at the Africa Clinical Research Network (https://acrnhealth.com/). I build technology that works for and with the communities it's meant to serve.
-My work sits at the intersection of data, advocacy and grassroots innovation. Whether I'm analysing data to protect marginalized communities, building the technology informed by the, leading a 50+ member Enactus chapter or representing students in panels, the throughline is the same: Technology Is Most Powerful When It's Built With Community In Mind!!
-I have twice been a Graduation Speaker at HIT with the President of Zimbabwe in attendance, a Higherlife Fellow, a Millennium Campus Fellow, Mckinsey Forward certified and the Squad Lead for Research, Advocacy and Digital Communications at She STEMs Foundation. I don't just study technology, I use it.
+I am an **Information Technology student at the Harare Institute of Technology (HIT)**, dedicated to building technology that works *for* and *with* the communities it serves. My work sits at the intersection of data science, software development, and grassroots innovation. 
 
-What I'm Building
+Currently, I am deepening my expertise in data engineering through the **Women Techsters Fellowship** (https://tech4dev.com/programs/women-techsters.html) and sharpening my engineering skills as a **Software Intern at the Africa Clinical Research Network (ACRN)** (https://acrnhealth.com/). Whether I am architecting data pipelines, leading a 50+ member Enactus chapter, or representing youth on international panels, my core mission remains the same: *Technology is most powerful when it is built with community in mind.*
 
-VAKA AI-enhanced construction project management platform for the Zimbabwean diaspora homebuilding market (HIT 200 Programme).TypeScript · Research · Systems Design
+### 🏅 Key Milestones
+* **Two-Time Graduation Speaker** at HIT, presenting in the presence of the President of Zimbabwe.
+* **Fellowships & Accreditations**: Higherlife Fellow · Millennium Campus Fellow · McKinsey Forward Alumna.
+* **Leadership**: Squad Lead for Research, Advocacy, and Digital Communications at the She STEMs Foundation.
 
-ACRN InternshipSoftware intern at Africa Clinical Research Network — building digital infrastructure for clinical trials across Africa using multiple tools inluding SQL · Data Pipelines 
+---
 
-Tech Stack
-Languages        Python· SQL · TypeScript · Java (Android)
-Data and BI      Pandas · NumPy · Power BI · Tableau · Excel (Advanced)
-Frameworks       Django
-Tools            Jupyter · Git · MySQL · Google Analytics
-Learning         Machine Learning · Statistical Modelling · Data Pipelines
+## 🛠️ What I'm Building
+
+### 🏗️ VAKA
+An AI-enhanced construction project management platform tailored for the Zimbabwean diaspora homebuilding market, developed under the **HIT 200 Programme**.
+* **Core Focus:** Systems Design · Technical Research  
+* **Tech Stack:** `TypeScript`
+
+### 🩺 ACRN Clinical Trial Infrastructure
+Developing robust digital infrastructure to streamline and secure clinical trials across Africa during my software internship at the **Africa Clinical Research Network**.
+* **Core Focus:** Digital Infrastructure · Backend Systems  
+* **Tech Stack:** `SQL` · `Data Pipelines`
+
+
+| Category | Technologies |
+| :--- | :--- |
+| **Languages** | ![Python](https://shields.io) ![SQL](https://shields.io) ![TypeScript](https://shields.io) ![Java](https://shields.io) |
+| **Data and BI** | ![Pandas](https://shields.io) ![NumPy](https://shields.io) ![Power BI](https://shields.io) ![Tableau](https://shields.io) ![Excel](https://shields.io) |
+| **Frameworks** | ![Django](https://shields.io) |
+| **Tools** | ![Jupyter](https://shields.io) ![Git](https://shields.io) ![MySQL](https://shields.io) ![Google Analytics](https://shields.io) |
+| **Learning** | ![Machine Learning](https://shields.io) ![Statistical Modelling](https://shields.io) ![Data Pipelines](https://shields.io) |
+
 
 Certifications and Recognition
 
@@ -58,26 +76,40 @@ Certifications and Recognition
   </tr>
 </table>
 
+## 🎓 Academic Performance
 
-Academic Performance
+### 🏛️ Harare Institute of Technology
+**Bachelor of Technology (B.Tech.) in Information Technology**  
+*2024 — 2028 (Expected)*  
+* **Focus Areas:** Systems Architecture · Software Engineering Foundations · Core Computing
 
-Bachelor of Technology in Information Technology · Harare Institute of Technology · 2024–2028
-Data Science and Engineering Certificate from a one year fellowship at Tech4Dev
+### 🚀 Tech4Dev (Women Techsters Fellowship)
+**Data Science and Engineering Certificate**  
+*1-Year Professional Fellowship Program*  
+* **Focus Areas:** Advanced Data Pipelines · Statistical Analysis · Machine Learning Implementations
 
-Leadership
+## 👥 Leadership & Impact
 
-* 🎖️ Software Intern, Africa Clinical Research Network (ACRN)
-* 🎖️ President, Enactus HIT
-* 🎖️ Women Techsters Fellow, Tech4Dev (Data Science and Engineering track)
-* 🎖️ Squad Lead — Research, Advocacy and Digital Communications, She STEMs Foundation
-* 🎖️ Community Secretary, GDG on Campus HIT
+* **President**, Enactus HIT 🎖️
+* **Squad Lead — Research, Advocacy & Digital Communications**, She STEMs Foundation 🎖️
+* **Community Secretary**, GDG on Campus HIT 🎖️
+* **Software Intern**, Africa Clinical Research Network (ACRN) 🎖️
+* **Women Techsters Fellow**, Tech4Dev (Data Science and Engineering Track) 🎖️
 
-Languages
-English · Shona · Ndebele
+---
+
+## 🗣️ Languages
+
+**English** (Fluent) · **Shona** (Native) · **Ndebele** (Conversational)
+
+---
 
 <p align="center">
   <i>"Technology is most powerful when built with and for community."</i>
 </p>
+
 <p align="center">
-  📬 pamveemoyo@gmail.com
+  <a href="mailto:pamveemoyo@gmail.com">
+    <img src="https://shields.io" alt="Email" />
+  </a>
 </p>
