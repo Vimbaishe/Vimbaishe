@@ -46,14 +46,14 @@ Certifications and Recognition
   </tr>
   <!-- Row 3 -->
   <tr>
-    <td>🎤 UNESCO Safer Campuses Speaker</td>
-    <td>🎤 HIT Girls in ICT Panellist</td>
     <td>🏆 JCI National Winner (E-Mukoko)</td>
+     <td>🏆 Schneider Electric 3rd Place</td>
+    <td>🏆 Delta Competition Top 5</td>
   </tr>
   <!-- Row 4 -->
   <tr>
-    <td>🏆 Schneider Electric 3rd Place</td>
-    <td>🏆 Delta Competition Top 5</td>
+   <td>🎤 UNESCO Safer Campuses Speaker</td>
+    <td>🎤 HIT Girls in ICT Panellist</td>
     <td></td> <!-- Left blank to maintain 3-column structure -->
   </tr>
 </table>
