@@ -25,7 +25,7 @@
 
 I am an **Information Technology** student at the **Harare Institute of Technology**,
 deepening my data science and engineering capabilities through the **Women Techsters Fellowship
-(Tech4Dev)** while serving as a **Software Engineering Intern at the Africa Clinical Research
+(Tech4Dev)** and I am also serving as a **Software Engineering Intern at the Africa Clinical Research
 Network (ACRN)** building digital infrastructure for clinical trials across Africa.
 
 My work sits at the intersection of **data systems, community technology and advocacy**. Whether
