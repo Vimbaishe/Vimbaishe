@@ -31,24 +31,38 @@ Learning         Machine Learning · Statistical Modelling · Data Pipelines
 
 Certifications and Recognition
 
-🏅 Google Data Analytics Certificate
-🏅 McKinsey Forward Program
-🏅 Women Techsters Fellowship — Data Science and Engineering (Tech4Dev)
-🏅 Millennium Campus Fellow
-🏅 Multiple DataCamp Certificates
-🏅 Internet Governance Certificate
-🎤 UNESCO Safer Campuses Launch Speaker
-🎤 HIT Girls in ICT Panellist
-🏆 JCI National Competition Winner (E-Mukoko)
-🏆 Schneider Electric Battery Innovation Challenge — 3rd Place (PowerPulse)
-🏆 Delta Competition Top 5 (Above the Influence educational game)
+<table>
+  <!-- Row 1 -->
+  <tr>
+    <td width="33%">🏅 Google Data Analytics Certificate</td>
+    <td width="33%">🏅 McKinsey Forward Program</td>
+    <td width="33%">🏅 Women Techsters Fellowship</td>
+  </tr>
+  <!-- Row 2 -->
+  <tr>
+    <td>🏅 Millennium Campus Fellow</td>
+    <td>🏅 Multiple DataCamp Certificates</td>
+    <td>🏅 Internet Governance Certificate</td>
+  </tr>
+  <!-- Row 3 -->
+  <tr>
+    <td>🎤 UNESCO Safer Campuses Speaker</td>
+    <td>🎤 HIT Girls in ICT Panellist</td>
+    <td>🏆 JCI National Winner (E-Mukoko)</td>
+  </tr>
+  <!-- Row 4 -->
+  <tr>
+    <td>🏆 Schneider Electric 3rd Place</td>
+    <td>🏆 Delta Competition Top 5</td>
+    <td></td> <!-- Left blank to maintain 3-column structure -->
+  </tr>
+</table>
 
 
 Academic Performance
 
-BTech Information Technology · Harare Institute of Technology · 2024–2028
-
-Consistent high performance across software engineering, data and systems subjects — including in Principles of Programming Languages, Software Project Management, Data Communications, Software Engineering and Ethics & Professionalism.
+Bachelor of Technology in Information Technology · Harare Institute of Technology · 2024–2028
+Data Science and Engineering Certificate from a one year fellowship at Tech4Dev
 
 Leadership
 
