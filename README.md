@@ -29,7 +29,7 @@ deepening my data science and engineering capabilities through the **Women Techs
 Network (ACRN)** building digital infrastructure for clinical trials across Africa.
 
 My work sits at the intersection of **data systems, community technology and advocacy**. Whether
-I am architecting IoT sensor pipelines for smallholder farmers, leading an Enactus
+I am writing code for healthcare, analysing data for businesses, leading an Enactus
 innovation chapter or representing students on international stages, my engineering ethos is
 consistent: *technology is most powerful when it is built with and for community.*
 
