@@ -66,11 +66,11 @@ Data Science and Engineering Certificate from a one year fellowship at Tech4Dev
 
 Leadership
 
-🎖️ Software Intern, Africa Clinical Research Network (ACRN)
-🎖️ President, Enactus HIT
-🎖️ Women Techsters Fellow, Tech4Dev (Data Science and Engineering track)
-🎖️ Squad Lead — Research, Advocacy and Digital Communications, She STEMs Foundation
-🎖️ Community Secretary, GDG on Campus HIT
+* 🎖️ Software Intern, Africa Clinical Research Network (ACRN)
+* 🎖️ President, Enactus HIT
+* 🎖️ Women Techsters Fellow, Tech4Dev (Data Science and Engineering track)
+* 🎖️ Squad Lead — Research, Advocacy and Digital Communications, She STEMs Foundation
+* 🎖️ Community Secretary, GDG on Campus HIT
 
 Languages
 English · Shona · Ndebele
