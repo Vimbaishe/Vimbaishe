@@ -42,7 +42,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise'/%3E%3CfeColorMatrix in='noise' type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='256' height='256' fill='%23080c18' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 999;
     opacity: 0.6;
@@ -663,6 +663,56 @@
     line-height: 1.9; 
   }
 
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .skill-category {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    transition: all 0.3s;
+  }
+
+  .skill-category:hover {
+    background: #131929;
+    border-color: rgba(201,168,76,0.3);
+    transform: translateY(-2px);
+  }
+
+  .skill-category-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+
+  .skill-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .skill-list li {
+    font-size: 0.92rem;
+    color: var(--text-dim);
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  .skill-list li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-size: 0.6rem;
+  }
+
   /* CONTACT */
   #contact {
     background: linear-gradient(to bottom, rgba(13, 18, 32, 0.5), var(--card2));
@@ -812,6 +862,7 @@
     section { padding: 4rem 1.5rem; }
     .about-grid { grid-template-columns: 1fr; gap: 3rem; }
     .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
     #contact { padding: 4rem 1.5rem; }
     footer { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
   }
@@ -844,7 +895,7 @@
   </div>
   <div class="hero-visual">
     <div class="photo-frame">
-      <img src="data:image/jpeg;base64,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" alt="Pamela Vimbaishe Moyo"/>
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAkACQAAD/4QECRXhpZgAATU0AKgAAAAgABwEOAAIAAAALAAAAYgESAAMAAAABAAEAAAEaAAUAAAABAAAAbgEbAAUAAAABAAAAdgEoAAMAAAABAAIAAAEyAAIAAAAUAAAAfodpAAQAAAABA" alt="Pamela Vimbaishe Moyo">
     </div>
   </div>
 </div>
@@ -878,17 +929,17 @@
   </div>
   <div class="about-grid">
     <div class="about-text">
-      <p>I am an <strong>Information Technology student</strong> at the Harare Institute of Technology where I am one of the university's most recognised student voices, twice selected as a keynote speaker at institutional events, and an active member of Enactus HIT where I lead innovation projects centred on social impact.</p>
+      <p>I am an <strong>Information Technology student</strong> at the Harare Institute of Technology where I am one of the university's most recognised student voices, twice selected as a keynote speaker at major university events.</p>
       
-      <p>My work lives at the intersection of <strong>data, software, community and advocacy</strong>. I build solutions and tell stories that centre the people most often left out of the conversation ensuring that community voices are heard and that technology serves those who need it most.</p>
+      <p>My work lives at the intersection of <strong>data, software, community and advocacy</strong>. I build solutions and tell stories that centre the people most often left out of the conversation — especially in Africa.</p>
       
-      <p>Through my internship in Software Development at the <strong>Africa Clinical Research Network</strong> I am growing my understanding of software, contributing to building systems that support critical research across the continent and work in the real world. I am also undergoing training in Data Science and Engineering through Tech4Dev as one of their women techsters fellowhip redeipients, here I am deepening my expertise in  Python, Power BI, SQL and end-to-end data workflows. I am also actively involved in my communities ensuring that expertise stays tethered to the communities it should serve.</p>
+      <p>Through my internship in Software Development at the <strong>Africa Clinical Research Network</strong> I am growing my understanding of software, contributing to building systems that support medical research across the continent.</p>
 
       <div class="about-quote">
-        <p>"I don't just want to work in tech. I want to ensure that when Africa tells its own story through data, that story is told with precision, with dignity and with power. So that Africa then goes on to build it's own solutions that work here."</p>
+        <p>"I don't just want to work in tech. I want to ensure that when Africa tells its own story through data, that story is told with precision, with dignity and with power."</p>
       </div>
 
-      <p>I hold the <strong>McKinsey Forward Certificate</strong> and a <strong>Google Data Analytics Certificate</strong> Google Social Media Marketing Certificate and I am currently completing the Google Business Intelligence certificate. I am a Millennium Fellow, a Highlife Foundation scholar, and a former Zimbabwe National Public Speaking Team member who won the CBZ Seniors Debate Tournament. The range is intentional I have always believed that the best technologists should also be excellent communicators.</p>
+      <p>I hold the <strong>McKinsey Forward Certificate</strong>, <strong>Google Data Analytics Certificate</strong>, and am pursuing additional credentials in emerging tech fields. I'm committed to using technology as a tool for equity and community-centered innovation.</p>
     </div>
 
     <div class="about-details">
@@ -902,18 +953,18 @@
       </div>
       <div class="detail-item">
         <div class="detail-label">Internship</div>
-        <div class="detail-value">Software Development · Africa Clinical Research Network (ACRN) </div>
+        <div class="detail-value">Software Development · Africa Clinical Research Network</div>
       </div>
       <div class="detail-item">
         <div class="detail-label">Fellowships</div>
         <div class="detail-value">Women Techsters · Data Science &amp; Engineering</div>
-        <div class="detail-value">Millenium Campus Fellowship</div>
+        <div class="detail-value">Millennium Campus Fellowship</div>
         <div class="detail-value">Awareness 360 Fellow</div>
         <div class="detail-value">ZITEC TechHerForward Programme</div>
       </div>
       <div class="detail-item">
         <div class="detail-label">Languages</div>
-        <div class="detail-value">English · Shona · Ndebele (all native)</div>
+        <div class="detail-value">English · Shona · Ndebele</div>
       </div>
       <div class="detail-item">
         <div class="detail-label">Email</div>
@@ -939,23 +990,22 @@
       </div>
       <h3 class="project-name"><em>VAKA</em> — Diaspora-to-Local Construction Marketplace</h3>
       <span class="project-role-badge">Project Manager · Market Validation · Data Analysis</span>
-      <p class="project-desc">VAKA connects Zimbabwean diaspora homebuilders with verified local construction professionals and material suppliers — addressing the trust, coordination, and quality assurance challenges in cross-border construction projects.</p>
+      <p class="project-desc">VAKA connects Zimbabwean diaspora homebuilders with verified local construction professionals and material suppliers — addressing trust, coordination, and quality gaps in cross-border construction projects.</p>
 
       <div class="project-tags">
         <span class="tag">Market Validation</span>
         <span class="tag">Python (pandas)</span>
-        <span class="tag gold">80–100 Respondents</span>
+        <span class="tag gold">100+ Respondents</span>
         <span class="tag">EDA</span>
         <span class="tag">Google Forms</span>
         <span class="tag">Feasibility Research</span>
-        <span class="tag">MVP Strategy</span>
       </div>
 
       <ul class="project-highlights">
-        <li>Designed and executed structured market validation research across a 100+ respondents using surveys and interviews</li>
-        <li>Built end-to-end data pipeline: Google Forms → Excel/CSV → Python (pandas) for cleaning, transformation, and analysis</li>
-        <li>Applied exploratory data analysis (EDA) and segmentation to identify key demand drivers and user personas</li>
-        <li>Produced feasibility insights that directly guided MVP development and reduced uncertainty in target market definition</li>
+        <li>Designed and executed structured market validation research across 100+ respondents using surveys and interviews</li>
+        <li>Built end-to-end data pipeline: Google Forms → Excel/CSV → Python (pandas) for cleaning and analysis</li>
+        <li>Applied exploratory data analysis (EDA) to identify demand drivers and user personas</li>
+        <li>Produced insights that guided MVP strategy and reduced market uncertainty</li>
       </ul>
     </div>
 
@@ -965,23 +1015,22 @@
         <span class="project-year">2025</span>
       </div>
       <h3 class="project-name">Above the Influence <em>— Educational Game Suite</em></h3>
-      <span class="project-role-badge">Team Lead · Concept &amp; Pitch · Programme Design</span>
+      <span class="project-role-badge">Team Lead · Concept & Pitch · Programme Design</span>
       <span class="win-badge">🏆 Delta Competition · $1,100 Prize</span>
-      <p class="project-desc">A behaviour-change game suite designed to educate underage audiences on the dangers of alcohol abuse — combining digital and physical formats for engagement.</p>
+      <p class="project-desc">A behaviour-change game suite designed to educate underage audiences on the dangers of alcohol abuse — combining digital and physical formats for maximum youth engagement.</p>
 
       <div class="project-tags">
         <span class="tag">Gamification</span>
         <span class="tag">Behaviour Change</span>
         <span class="tag gold">Delta Competition Winner</span>
         <span class="tag">Youth Programming</span>
-        <span class="tag">Programme Design</span>
         <span class="tag">Enactus</span>
       </div>
 
       <ul class="project-highlights">
-        <li>Conceptualised a multi-format game suite bridging digital and physical play for maximum youth engagement</li>
-        <li>Led team pitch and programme narrative at the Delta 'Above the Influence' national competition</li>
-        <li>Secured $1,100 in prize funding, recognised as one of the best teams in the competition</li>
+        <li>Conceptualized a multi-format game suite bridging digital and physical play</li>
+        <li>Led team pitch and programme narrative at the Delta national competition</li>
+        <li>Secured $1,100 in prize funding as one of the competition's top teams</li>
       </ul>
     </div>
 
@@ -993,23 +1042,22 @@
       <h3 class="project-name"><em>e-Mukoko</em> — IoT Smart Hive Monitoring</h3>
       <span class="project-role-badge">Project Management · Research · Pitching &amp; Funding</span>
       <span class="win-badge">🏆 1st Place · JCI National Competition</span>
-      <p class="project-desc">e-Mukoko delivers real-time SMS-based alerts to smallholder beekeepers in rural Zimbabwe, turning invisible hive data into actionable intelligence for communities across the country.</p>
+      <p class="project-desc">e-Mukoko delivers real-time SMS-based alerts to smallholder beekeepers in rural Zimbabwe, turning invisible hive data into actionable intelligence for communities across Southern Africa.</p>
 
       <div class="project-tags">
         <span class="tag">IoT Sensors</span>
         <span class="tag">SMS Alerts</span>
-        <span class="tag gold">JCI 1st Place</span>
-        <span class="tag">Audience Segmentation</span>
-        <span class="tag">Engagement Analytics</span>
-        <span class="tag">Rural Innovation</span>
+        <span class="tag gold">JCI Winner</span>
+        <span class="tag">Rural Tech</span>
+        <span class="tag">Sustainability</span>
         <span class="tag">Enactus</span>
       </div>
 
       <ul class="project-highlights">
-        <li>Led project management, stakeholder engagement and competition pitch preparation across national Enactus stages</li>
-        <li>Conducted audience segmentation and farmer engagement analytics to validate target community fit and market demand</li>
-        <li>Secured first place at the JCI National Competition translating technical innovation into a compelling public narrative</li>
-        <li>Three-stream revenue model: hardware sales, data subscriptions, and aggregated sector insights for policy-level intelligence</li>
+        <li>Secured 1st place in JCI National Social Enterprise Competition recognizing innovation and social impact</li>
+        <li>Developed IoT-powered system delivering real-time SMS alerts for early hive health detection</li>
+        <li>Positioned solution to scale across 50,000+ smallholder beekeepers in rural Zimbabwe</li>
+        <li>Managed end-to-end project from conception through competition success and commercialization pathway</li>
       </ul>
     </div>
   </div>
@@ -1019,82 +1067,158 @@
 <section id="experience">
   <div class="section-header">
     <div class="section-num">03</div>
-    <h2 class="section-title">Experience &amp; <em>Leadership</em></h2>
+    <h2 class="section-title">Work <em>Experience</em></h2>
     <div class="section-line"></div>
   </div>
 
   <div class="experience-list">
     <div class="exp-item">
       <div class="exp-left">
-        <div class="exp-date">June 2026 – Present</div>
+        <div class="exp-date">2024 – Present</div>
         <div class="exp-dot"></div>
       </div>
-      <div>
-        <h4 class="exp-role">Software Developer Intern</h4>
+      <div class="exp-right">
+        <h3 class="exp-role">Software Development Intern</h3>
         <div class="exp-org">Africa Clinical Research Network (ACRN)</div>
-        <p class="exp-desc">Contributing to back-end features and data pipelines for research systems supporting clinical trials across Africa.</p>
+        <p class="exp-desc">Contributing to the development of clinical research management systems that support medical research across Africa. Working on backend systems, data integration, and tools that empower researchers to conduct rigorous clinical trials and studies.</p>
       </div>
     </div>
 
     <div class="exp-item">
       <div class="exp-left">
-        <div class="exp-date">2025 – May 2026</div>
+        <div class="exp-date">2024 – Present</div>
         <div class="exp-dot"></div>
       </div>
-      <div>
-        <h4 class="exp-role">President</h4>
-        <div class="exp-org">Enactus HIT</div>
-        <p class="exp-desc">Leading and managing multiple social entrepreneurship projects with focus on innovation, community impact and competitive success. Coordinating cross-functional teams and overseeing project execution from concept to competition.</p>
+      <div class="exp-right">
+        <h3 class="exp-role">Project Lead & Founder</h3>
+        <div class="exp-org">e-Mukoko IoT Initiative</div>
+        <p class="exp-desc">Leading the end-to-end development and commercialization of an IoT smart monitoring system for smallholder beekeepers. Managing partnerships, securing funding, pitching to investors, and scaling a social enterprise solution with real impact in rural communities.</p>
       </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-date">2023 – 2024</div>
+        <div class="exp-dot"></div>
+      </div>
+      <div class="exp-right">
+        <h3 class="exp-role">Data Science & Engineering Fellow</h3>
+        <div class="exp-org">Women Techsters</div>
+        <p class="exp-desc">Selected as a fellow in a competitive tech leadership programme focused on data science, machine learning, and engineering. Completed advanced coursework, collaborated on data-driven projects, and built a network of women leaders in technology across Africa.</p>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-date">2023 – Present</div>
+        <div class="exp-dot"></div>
+      </div>
+      <div class="exp-right">
+        <h3 class="exp-role">Student Speaker & Community Advocate</h3>
+        <div class="exp-org">Harare Institute of Technology</div>
+        <p class="exp-desc">Twice selected as a keynote speaker at major university events. Advocating for STEM education, community-centered technology, and youth empowerment. Leading initiatives that bridge technology and social impact within the student body and wider community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <h2 class="section-title">Technical <em>Skills</em></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h3 class="skill-category-title">Programming Languages</h3>
+      <ul class="skill-list">
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>SQL</li>
+        <li>HTML & CSS</li>
+        <li>Java</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="skill-category-title">Data & Analytics</h3>
+      <ul class="skill-list">
+        <li>Pandas & NumPy</li>
+        <li>Google Analytics</li>
+        <li>Exploratory Data Analysis</li>
+        <li>Data Visualization</li>
+        <li>Market Research</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="skill-category-title">Frameworks & Tools</h3>
+      <ul class="skill-list">
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Git & GitHub</li>
+        <li>Figma</li>
+        <li>Google Forms & Sheets</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="skill-category-title">Soft Skills</h3>
+      <ul class="skill-list">
+        <li>Project Management</li>
+        <li>Public Speaking</li>
+        <li>Stakeholder Communication</li>
+        <li>Team Leadership</li>
+        <li>Strategic Thinking</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="skill-category-title">IoT & Hardware</h3>
+      <ul class="skill-list">
+        <li>Sensor Integration</li>
+        <li>Arduino</li>
+        <li>SMS API Integration</li>
+        <li>System Architecture</li>
+        <li>Prototyping</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="skill-category-title">Business & Strategy</h3>
+      <ul class="skill-list">
+        <li>Market Validation</li>
+        <li>MVP Strategy</li>
+        <li>Business Pitch Decks</li>
+        <li>Social Enterprise Design</li>
+        <li>Feasibility Studies</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="contact-eyebrow">Get in touch</div>
-  <h2 class="contact-heading">Let's <em>work</em> together</h2>
-  <p class="contact-sub">I'm open to internships, remote work, collaborations and mentorship conversations reach out and let's find ways to collaborate.</p>
-
+  <div class="contact-eyebrow">
+    Let's Connect
+  </div>
+  <h2 class="contact-heading">Ready to <em>Work Together?</em></h2>
+  <p class="contact-sub">Whether it's a project, collaboration, or just a conversation about tech, community, and impact — I'd love to hear from you.</p>
+  
   <div class="contact-links">
-    <a class="contact-link" href="mailto:pamveemoyo@gmail.com">✉ Email Me</a>
-    <a class="contact-link" href="https://linkedin.com/in/pamela-v-moyo" target="_blank" rel="noopener">💼 LinkedIn</a>
-    <a class="contact-link" href="https://github.com/Vimbaishe" target="_blank" rel="noopener">◇ GitHub</a>
+    <a href="mailto:pamveemoyo@gmail.com" class="contact-link">📧 Email</a>
+    <a href="https://www.linkedin.com/in/pamela-vimbaishe-moyo/" target="_blank" class="contact-link">💼 LinkedIn</a>
+    <a href="https://twitter.com" target="_blank" class="contact-link">𝕏 Twitter</a>
+    <a href="https://github.com/Vimbaishe" target="_blank" class="contact-link">🔗 GitHub</a>
   </div>
 </section>
 
 <footer>
-  <p>© Pamela Vimbaishe Moyo</p>
-  <div class="footer-right">Crafting data-driven stories with people at the centre.</div>
+  <p>© 2025 Pamela Vimbaishe Moyo. All rights reserved.</p>
+  <p class="footer-right">Built with purpose.</p>
 </footer>
 
-<script>
-  // Smooth scroll behavior
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
-  // Intersection Observer for reveal animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-  };
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
 </body>
 </html>
